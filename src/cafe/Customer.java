@@ -6,7 +6,6 @@ public class Customer {
     private String nickName;
     private int orderCount;
     private String menu;
-
     private String thanksComment;
 
     public String getNickName() {
@@ -46,7 +45,7 @@ public class Customer {
     }
 
     public void payment(int price) {
-        System.out.println(price + "원입니다");
+        System.out.println(price);
     }
 
     public String pickUp() {
