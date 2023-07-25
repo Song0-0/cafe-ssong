@@ -1,3 +1,5 @@
+package cafe;
+
 import cafe.Barista;
 import cafe.Customer;
 

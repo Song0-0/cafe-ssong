@@ -36,10 +36,15 @@ public class Customer {
             System.out.println("결제가 완료되었습니다. 결제 후 잔액은" + payTotalAmount + "원으로 충전이 필요합니다.");
         }
 
+        return payTotalAmount;
+    }
+
+    public void pickupCoffee() {
+
         Barista barista = new Barista();
         barista.setPickupTableCoffee(0);
 
-        return payTotalAmount;
+        System.out.println("감사합니다.");
     }
 
 
