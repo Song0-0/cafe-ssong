@@ -1,50 +1,40 @@
 package cafe;
 
 public class Menu {
-
     private String name;
     private String size;
+    private String temperature;
     private int price;
-    private String temp;
-    private int menuCount;
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    void setName(String name) {
         this.name = name;
     }
 
-    public String getSize() {
+    String getSize() {
         return size;
     }
 
-    public void setSize(String size) {
+    void setSize(String size) {
         this.size = size;
     }
 
-    public int getPrice() {
+    String getTemperature() {
+        return temperature;
+    }
+
+    void setTemperature(String temperature) {
+        this.temperature = temperature;
+    }
+
+    int getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    void setPrice(int price) {
         this.price = price;
-    }
-
-    public String getTemp() {
-        return temp;
-    }
-
-    public void setTemp(String temp) {
-        this.temp = temp;
-    }
-
-    public int getMenuCount() {
-        return menuCount;
-    }
-
-    public void setMenuCount(int menuCount) {
-        this.menuCount = menuCount;
     }
 }

@@ -1,36 +1,25 @@
 package cafe;
 
-import java.util.List;
-
 public class Barista {
-    private int orderCount;
-    private List<Menu> menu;
+    private int pickupTableCoffee;
 
-    public int getOrderCount() {
-        return orderCount;
+    int getPickupTableCoffee() {
+        return pickupTableCoffee;
     }
 
-    public void setOrderCount(int orderCount) {
-        this.orderCount = orderCount;
+    void setPickupTableCoffee(int pickupTableCoffee) {
+        this.pickupTableCoffee = pickupTableCoffee;
     }
 
-    public List<Menu> getMenu() {
-        return menu;
-    }
+    public int giveCoffee(int pickupTableCoffee, String nickname) {
+        this.pickupTableCoffee += pickupTableCoffee;
 
-    public void setMenu(List<Menu> menu) {
-        this.menu = menu;
-    }
+        Customer customer = new Customer();
+        Menu menu = new Menu();
+        customer.setNickname(nickname);
 
-    public void getOrder(String menu) {
-        System.out.println("네, 고객님. " + menu + "준비해드리겠습니다.");
-    }
+        System.out.println(customer.getNickname() + "고객님 주문하신" + menu.getName() + " 한 잔 나왔습니다.");
 
-    public void payment(int money) {
-        System.out.println(money + "원 결제하겠습니다.");
-    }
-
-    public void serveCoffee(int orderCount, String menu) {
-        System.out.println(menu+ orderCount + "잔 드리겠습니다.");
+        return pickupTableCoffee;
     }
 }
