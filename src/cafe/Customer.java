@@ -3,6 +3,18 @@ package cafe;
 public class Customer {
     private int payTotalAmount;
     private String nickname;
+    private Menu menu;
+
+    //이 초기화를 안하면 nullPointerExcetion이 발생한다.
+    //기본 생서자는 그냥 생기는데 왜 생성자를 만든것이지?
+    //생성자에서 Menu 객체를 초기화한다.
+    public Customer() {
+        menu = new Menu();
+    }
+
+    Menu getMenu() {
+        return menu;
+    }
 
     String getNickname() {
         return nickname;
@@ -18,7 +30,6 @@ public class Customer {
     }
 
     public void orderCoffee(String size, String name, String temperature) {
-        Menu menu = new Menu();
         menu.setSize(size);
         menu.setName(name);
         menu.setTemperature(temperature);
@@ -45,6 +56,7 @@ public class Customer {
         barista.setPickupTableCoffee(0);
 
         System.out.println("감사합니다.");
+        System.out.println("(픽업테이블 : "+barista.getPickupTableCoffee()+"개의 커피가 있습니다.)");
     }
 
 
