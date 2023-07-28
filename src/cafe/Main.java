@@ -15,8 +15,11 @@ public class Main {
         Barista barista = new Barista();
 
         //Customer 클래스에서 커피를 주문(orderCoffee())한 후, Menu객체를 가져와서 Barista에 넘겨준다.
-        Menu menu = customer.getMenu();
-        barista.giveCoffee(1,"쏭쏭", menu);
+//        Menu menu = customer.getMenu();
+//        barista.giveCoffee(1,"쏭쏭", menu);
+        PickUpTable pickUpTable = new PickUpTable();
+        Menu menu = new Menu();
+        pickUpTable.baristaSay(customer, menu);
 
         /**
          Menu클래스를 Customer클래스에서 필드로 받아서 활용했는데..
@@ -32,6 +35,7 @@ public class Main {
          Main 클래스에서도 Customer 클래스에서 셋팅된 Menu 클래스의 필드를 호출하면 셋팅되어있는 원하는 값을 불러올 수 있다.
          */
 
-        customer.pickupCoffee();
+//        customer.pickupCoffee();
+        pickUpTable.customerSay();
     }
 }

@@ -50,13 +50,16 @@ public class Customer {
         return payTotalAmount;
     }
 
-    public void pickupCoffee() {
+    public void pickupCoffee(PickUpTable pickUpTable) {
 
-        Barista barista = new Barista();
-        barista.setPickupTableCoffee(0);
+//        Barista barista = new Barista();
+//        barista.setPickupTableCoffee(0);
 
-        System.out.println("감사합니다.");
-        System.out.println("(픽업테이블 : "+barista.getPickupTableCoffee()+"개의 커피가 있습니다.)");
+//        System.out.println("감사합니다.");
+//        System.out.println("(픽업테이블 : "+barista.getPickupTableCoffee()+"개의 커피가 있습니다.)");
+
+        pickUpTable.customerSay();
+
     }
 
 
