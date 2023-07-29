@@ -29,12 +29,4 @@ public class Menu {
     void setTemperature(String temperature) {
         this.temperature = temperature;
     }
-
-    int getPrice() {
-        return price;
-    }
-
-    void setPrice(int price) {
-        this.price = price;
-    }
 }

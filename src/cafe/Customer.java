@@ -5,11 +5,12 @@ public class Customer {
     private String nickname;
     private Menu menu;
 
-    //이 초기화를 안하면 nullPointerExcetion이 발생한다.
-    //기본 생서자는 그냥 생기는데 왜 생성자를 만든것이지?
+    //이 초기화를 안하면 NullPointerException이 발생한다.
+    //기본 생성자는 그냥 생기는데 왜 생성자를 만든것이지?
     //생성자에서 Menu 객체를 초기화한다.
-    public Customer() {
-        menu = new Menu();
+    public Customer(String nickname) {
+        menu = new Menu(); //Customer클래스 안에 있는 Menu클래스라서 Customer객체를 생성하면 Menu도 객체생성을 해줘야한다...
+        this.nickname = nickname;
     }
 
     Menu getMenu() {
@@ -33,7 +34,7 @@ public class Customer {
         menu.setSize(size);
         menu.setName(name);
         menu.setTemperature(temperature);
-        System.out.println(menu.getSize() + "사이즈 " + menu.getName() + " 한 잔 " + menu.getTemperature() + "로 주세요");
+        System.out.println(menu.getSize() + "사이즈 " + menu.getName() + " 한 잔 " + menu.getTemperature() + "로 주세요.");
     }
 
     public int pay(int orderAmount) {
@@ -51,16 +52,7 @@ public class Customer {
     }
 
     public void pickupCoffee(PickUpTable pickUpTable) {
-
-//        Barista barista = new Barista();
-//        barista.setPickupTableCoffee(0);
-
-//        System.out.println("감사합니다.");
-//        System.out.println("(픽업테이블 : "+barista.getPickupTableCoffee()+"개의 커피가 있습니다.)");
-
-        pickUpTable.customerSay();
-
+        System.out.println("감사합니다.");
+        pickUpTable.pickedUp();
     }
-
-
 }
